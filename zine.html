@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html lang="pl">
 <head>
-    <meta charset="UTF-8">
+    <meta charset="UTF-8"/>
     <title>Title</title>
 </head>
 <body>
@@ -9,11 +9,13 @@
         <h1>Wiewiór <3</h1>
     </header>
     <nav>
-        <u1><a href="#article1"/> </u1>
-        <u2><a href="#article2"/> </u2>
-        <u3><a href="#image"/> </u3>
-        <u4><a href="#form"/> </u4>
-        <u5><a href="#footer"/> </u5>
+        <ul>
+            <a href="#article1">Ratujmy wiewiórki!</a>
+            <a href="#article2">Nie możemy się poddać!</a>
+            <a href="#image">Zdjęcie wiewióra</a>
+            <a href="#form">Formularz</a>
+            <a href="#footer">Stopka</a>
+        </ul>
     </nav>
     <main id="article1">
         <article>
@@ -22,17 +24,12 @@
         </article>
     </main>
     <aside id="article2">
-        <h2>Porównanie </h2>
+        <h2>Nie możemy się poddać!</h2>
+        <h2>Zdjęcie wiewióra</h2>
+        <figure id="image"> <img alt="wiewiórka" src="squirrel.png"> <figcaption> Słodka wiewiórka</figcaption> </figure>
         <table>
             <tr>
-                <th>1</th>
-                <th>2</th>
-                <th>3</th>
-            </tr>
-            <tr>
-                <th>1</th>
-                <th>2</th>
-                <th>3</th>
+                <th>Ruda wiewiórka ma bardzo dobre serduszko <3</th>
             </tr>
         </table>
     </aside>
@@ -44,17 +41,43 @@
         <li>kolorowa</li>
         <li>wyjątkowa</li>
     </ul>
-    <h2>zdjęcie wiewióra</h2>
-    <figure id="image"> <img alt="wiewiórka" src="squirrel.png"> </figure>
-        <figcaption> Cute wiewiórka</figcaption>
+        <h2>Porównanie </h2>
+        <table>
+            <tr>
+                <th></th>
+                <th>Ruda</th>
+                <th>Szara</th>
+            </tr>
+            <tr>
+                <th>Skąd?</th>
+                <th>Polska</th>
+                <th>UK</th>
+            </tr>
+            <tr>
+                <th>Jaka?</th>
+                <th>cute</th>
+                <th>meh</th>
+            </tr>
+            <tr>
+                <th>Charakter</th>
+                <th>grzeczna</th>
+                <th>ekspansywna</th>
+            </tr>
+            <tr>
+                <th>Broni się?</th>
+                <th>nie :(((</th>
+                <th>tak</th>
+            </tr>
+        </table>
+
     <h2>Dołącz do nas!</h2>
     <form id="form">
-        <label>Twoje dane</label>
-        <input type="text" name="imię">
-        <input type="text" name="nazwisko">
-        <input type="email" name="e-mail">
-        <button type="submit" title="wyślij!"> </button>
+        <label>Twoje dane</label> <br>
+        <input type="text" name="imię" placeholder="Imię"> <br>
+        <input type="text" name="nazwisko" placeholder="Nazwisko"> <br>
+        <input type="email" name="e-mail" placeholder="E-mail"> <br>
+        <button type="submit">Wyślij!</button>
     </form>
-    <footer id="footer">this is footer</footer>
+    <footer id="footer">Agnieszka Wawer</footer>
 </body>
 </html>
