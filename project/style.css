@@ -1,36 +1,102 @@
-* { box-sizing: border-box; }
-body { font-family: system-ui, sans-serif; margin: 0; padding: 1rem; }
-.page > div { border: 2px solid #000; padding: 1rem; }
-.header { background: #000; color: #fff; }
-.content h2 { margin-top: 0; }
-.tile { border: 1px solid #000; padding: 1rem; min-height: 5rem; }
-tr, td, th { border: 1px solid #000; padding: 0.5rem;}
+* {
+    box-sizing: border-box;
+}
+
+body {
+    font-family: system-ui, sans-serif;
+    margin: 0;
+    padding: 1rem;
+}
 
 .page {
     display: grid;
     gap: 1rem;
 }
 
-.tiles { repeat(auto-fill, minmax(10rem, 1fr)) }
+.page > div {
+    border: 2px solid #000;
+    padding: 1rem;
+}
+
+.header {
+    background: #000;
+    color: #fff;
+}
+
+.tiles {
+    repeat(auto-fill, minmax(10rem, 1fr))
+}
+
+.tile {
+    border: 1px solid #000;
+    padding: 1rem;
+    min-height: 5rem;
+}
+
+.content h2 {
+    margin-top: 0;
+}
+
+.container {
+    display: flex;
+}
+
+.footer {
+    text-align: end;
+}
+
+main > p {
+    display: flex;
+}
+
+table {
+    border-collapse: collapse;
+}
+
+tr, td, th {
+    border: 1px solid #000;
+    padding: 0.5rem;
+}
+
+img, figcaption {
+    display: flex;
+    margin: 0 auto;
+    align-items: end;
+    justify-content: center;
+    width: 50%;
+}
+
+@media (max-width: 48rem) {
+    .page {
+        grid-template-columns: 1fr;
+        grid-template-areas:
+        "header"
+        "filters"
+        "content"
+        "footer"
+        "search-bar"
+    }
+
+    .header { grid-area: header; }
+    .filters { grid-area: filters; }
+    .content { grid-area: content; }
+    .search-bar { grid-area: search-bar; }
+    .footer { grid-area: footer; }
+}
 
 @media(min-width: 48rem){
     .page {
-        grid-template-columns: 12rem 1fr 14rem;
+        grid-template-columns: 18rem 1fr 14rem;
         grid-template-areas:
         "header header header"
-        "menu content sidebar"
+        "filters search-bar search-bar"
+        "filters content content"
         "footer footer footer";
     }
 
     .header { grid-area: header; }
-    .menu { grid-area: menu; }
+    .filters { grid-area: filters; }
     .content { grid-area: content; }
-    .sidebar { grid-area: sidebar; }
+    .search-bar { grid-area: search-bar; }
     .footer { grid-area: footer; }
-}
-
-.img {
-    display: inline-grid;
-    align-items: center;
-    width: 20%;
 }
