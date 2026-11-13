@@ -1,0 +1,45 @@
+@import "index.css";
+
+.page {
+    grid-template-columns: auto;
+    grid-template-areas:
+        "header"
+        "content"
+        "footer"
+}
+
+.tiles {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+}
+
+.form {
+    padding: 2rem 10rem 2rem 10rem;
+}
+
+.form--inside {
+    display: inline-grid;
+    margin: 1rem 1rem;
+}
+
+label {
+    margin: 0.5rem;
+}
+
+input textarea {
+    width: 90%;
+    margin: 1rem auto;
+    padding: 0.2rem 1rem;
+}
+
+button {
+    margin-top: 2rem;
+    padding: 1rem 1rem;
+}
+
+.back {
+    min-height: auto;
+}
