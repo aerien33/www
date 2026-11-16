@@ -9,22 +9,22 @@
 </head>
 <body>
 <div class="page">
-    <div class="header">
+    <div class="top-bar">
         <header>LOGO</header>
     </div>
     <div class="content">
-        <div class="tiles">
-            <div class="tile form">
-                <h2>Create New Post</h2> <br>
-                <form class="form--inside">
-                    <label for="title">Title</label>
-                    <input type="text" id="title" name="name"> <br>
-                    <label for="content">Content</label>
-                    <textarea id="content" name="content" rows="4" cols="50"> </textarea>
-                    <button type="submit">Send</button>
+        <div class="tiles content__tiles">
+            <div class="tile content__tile form--tile">
+                <h2 class="header">Create New Post</h2> <br>
+                <form class="form__inside">
+                    <label class="upload__label" for="title">Title</label>
+                    <input class="upload__input" type="text" id="title" name="title" required>
+                    <label class="upload__label" for="content">Content</label>
+                    <textarea class="upload__textarea" id="content" name="content" rows="20" cols="50"> </textarea>
+                    <button class="upload__button" type="submit" name="send">Send</button>
                 </form>
             </div>
-            <div class="tile back">
+            <div class="back">
                 <h2><a href="../index.html">Back</a></h2>
             </div>
         </div>

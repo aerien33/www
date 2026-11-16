@@ -3,43 +3,49 @@
 .page {
     grid-template-columns: auto;
     grid-template-areas:
-        "header"
+        "top-bar"
         "content"
         "footer"
 }
 
-.tiles {
+.content__tiles {
     display: flex;
     flex-direction: column;
-    align-items: center;
     justify-content: center;
+    align-items: center;
     text-align: center;
 }
 
-.form {
-    padding: 2rem 10rem 2rem 10rem;
-}
-
-.form--inside {
+.form__inside {
     display: inline-grid;
     margin: 1rem 1rem;
 }
 
-label {
+.upload__label {
     margin: 0.5rem;
+    font-size: 1rem;
 }
 
-input textarea {
+.upload__input, .upload__textarea {
     width: 90%;
     margin: 1rem auto;
     padding: 0.2rem 1rem;
 }
 
-button {
-    margin-top: 2rem;
+.upload__button {
+    margin-top: 1rem;
     padding: 1rem 1rem;
+    color: var(--color-white);
+    background-color: var(--color-accent);
+    border: none;
 }
 
 .back {
-    min-height: auto;
+    margin: 1.5rem;
+}
+
+@media(min-width: 48rem){
+    .form__inside {
+        padding: 2rem 10rem 2rem 10rem;
+    }
 }
