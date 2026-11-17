@@ -77,6 +77,18 @@ body {
     background-color: var(--color-background);
 }
 
+@media(min-width: 48rem) {
+    .page {
+        grid-template-columns: 18rem 1fr 14rem;
+        grid-template-rows: 4rem 9.5rem auto 3rem;
+        grid-template-areas:
+        "top-bar top-bar top-bar"
+        "filters search-bar search-bar"
+        "filters content content"
+        "footer footer footer";
+    }
+}
+
 .top-bar { grid-area: top-bar; }
 .filters { grid-area: filters; }
 .content { grid-area: content; }
@@ -199,6 +211,13 @@ body {
     border-radius: var(--border-radius);
 }
 
+@media (min-width: 48rem) {
+    .filters {
+        margin-left: 1rem;
+        margin-right: 0;
+    }
+}
+
 .filters__tiles {
     display: flex;
     flex-direction: column;
@@ -211,6 +230,13 @@ body {
 
 .filters__tile {
     border-radius: var(--border-radius);
+}
+
+@media (min-width: 48rem) {
+    .filters__tile {
+        margin-top: 0.5rem;
+        min-height: 53.5rem;
+    }
 }
 
 .content {
@@ -250,13 +276,38 @@ body {
     margin-left: 0;
 }
 
+@media (min-width: 48rem) {
+    .search-bar {
+        position: static;
+        border-radius: var(--border-radius);
+        margin-left: 1rem;
+        margin-right: 1rem;
+    }
+}
+
 .search-bar__tile {
     margin: 0;
     padding: 0;
 }
 
+@media (min-width: 48rem) {
+    .search-bar__tile {
+        background: var(--color-white);
+        border-radius: var(--border-radius);
+        padding: 1rem;
+    }
+}
+
 .search-bar__header {
     display: none;
+}
+
+@media (min-width: 48rem) {
+    .search-bar__header {
+        display: grid;
+        justify-content: center;
+        margin-bottom: 1.5rem;
+    }
 }
 
 .search-bar__form {
@@ -272,6 +323,12 @@ body {
     padding: 0.5rem 1rem;
 }
 
+@media (min-width: 48rem) {
+    .search-bar__button {
+        margin-left: 1rem;
+    }
+}
+
 .footer {
     text-align: end;
     margin-right: 0.5rem;
@@ -280,50 +337,5 @@ body {
 @media (prefers-color-scheme: dark) {
     .footer {
         color: var(--color-accent);
-    }
-}
-
-@media(min-width: 48rem) {
-    .page {
-        grid-template-columns: 18rem 1fr 14rem;
-        grid-template-rows: 4rem 9.5rem auto 3rem;
-        grid-template-areas:
-        "top-bar top-bar top-bar"
-        "filters search-bar search-bar"
-        "filters content content"
-        "footer footer footer";
-    }
-
-    .filters {
-        margin-left: 1rem;
-        margin-right: 0;
-    }
-
-    .filters__tile {
-        margin-top: 0.5rem;
-        min-height: 53.5rem;
-    }
-
-    .search-bar {
-        position: static;
-        border-radius: var(--border-radius);
-        margin-left: 1rem;
-        margin-right: 1rem;
-    }
-
-    .search-bar__tile {
-        background: var(--color-white);
-        border-radius: var(--border-radius);
-        padding: 1rem;
-    }
-
-    .search-bar__header {
-        display: grid;
-        justify-content: center;
-        margin-bottom: 1.5rem;
-    }
-
-    .search-bar__button {
-        margin-left: 1rem;
     }
 }

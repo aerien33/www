@@ -12,3 +12,9 @@
     margin: 1.5rem;
     text-align: center;
 }
+
+@media (prefers-color-scheme: dark) {
+    .link {
+        color: var(--color-white);
+    }
+}
