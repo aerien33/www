@@ -10,22 +10,26 @@
 <body>
 <div class="page">
     <div class="top-bar">
-        <header>LOGO</header>
+        <header class="top-bar__logo">LOGO</header>
     </div>
     <div class="content">
         <div class="tiles content__tiles">
-            <div class="tile content__tile form--tile">
-                <h2 class="header">Create New Post</h2> <br>
+            <div class="tile form__tile">
+                <h2 class="header upload__header">Create New Post</h2> <br>
                 <form class="form__inside">
-                    <label class="upload__label" for="title">Title</label>
-                    <input class="upload__input" type="text" id="title" name="title" required>
-                    <label class="upload__label" for="content">Content</label>
-                    <textarea class="upload__textarea" id="content" name="content" rows="20" cols="50"> </textarea>
-                    <button class="upload__button" type="submit" name="send">Send</button>
+                    <div class="form__item">
+                        <label class="upload__label" for="title">Title</label>
+                        <input class="input upload__input" type="text" id="title" name="title" required>
+                    </div>
+                    <div class="form__item">
+                        <label class="upload__label" for="content">Content</label>
+                        <textarea class="input upload__textarea" id="content" name="content" rows="20" cols="50"> </textarea>
+                    </div>
+                    <button class="button upload__button" type="submit" name="send">Send</button>
                 </form>
             </div>
             <div class="back">
-                <h2><a href="../index.html">Back</a></h2>
+                <h2><a class="link back__link" href="../index.html">Back</a></h2>
             </div>
         </div>
     </div>

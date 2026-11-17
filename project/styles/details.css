@@ -1,5 +1,9 @@
 @import "index.css";
 
+.content__tile {
+    border-radius: var(--border-radius);
+}
+
 .back {
     margin: 1.5rem;
     text-align: center;

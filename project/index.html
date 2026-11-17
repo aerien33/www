@@ -10,65 +10,57 @@
 <body>
 <div class="page">
     <div class="top-bar">
-        <header>LOGO</header>
+        <header class="top-bar__logo">LOGO</header>
     </div>
-    <div class="filters">
+    <div class="card filters">
         <div class="filters__tiles">
             <div class="tile upload__tile">
-                <h2 class="header"><a href="pages/upload.html">Create New Post</a></h2>
+                <h2 class="header"><a class="link upload__link" href="pages/upload.html">Create New Post</a></h2>
             </div>
             <div class="tile filters__tile">
                 <h2 class="header">Filters</h2>
             </div>
         </div>
     </div>
-    <div class="content">
+    <div class="card content">
         <div class="tiles content__tiles">
-            <div class="tile content__tile">
+            <div class="tile content__tile content__tile--first">
                 <h2 class="header content__header">Content Header 1</h2>
                 <div class="content__container">
                     <p>Lorem ipsum dolor sit amet consectetur adipiscing elit. Quisque faucibus ex sapien vitae pellentesque sem placerat. In id cursus mi pretium tellus duis convallis. Tempus leo eu aenean sed diam urna tempor. Pulvinar vivamus fringilla lacus nec metus bibendum egestas. Iaculis massa nisl malesuada lacinia integer nunc posuere. Ut hendrerit semper vel class aptent taciti sociosqu. Ad litora torquent per conubia nostra inceptos himenaeos.</p>
-                    <a href="pages/details.html">More</a>
+                    <a class="link content__link" href="pages/details.html">More</a>
                 </div>
             </div>
-        </div>
-        <div class="tiles content__tiles">
             <div class="tile content__tile">
                 <h2 class="header content__header">Content Header 2</h2>
                 <div class="content__container">
                     <p>Lorem ipsum dolor sit amet consectetur adipiscing elit. Quisque faucibus ex sapien vitae pellentesque sem placerat. In id cursus mi pretium tellus duis convallis. Tempus leo eu aenean sed diam urna tempor. Pulvinar vivamus fringilla lacus nec metus bibendum egestas. Iaculis massa nisl malesuada lacinia integer nunc posuere. Ut hendrerit semper vel class aptent taciti sociosqu. Ad litora torquent per conubia nostra inceptos himenaeos.</p>
-                    <a href="pages/details.html">More</a>
+                    <a class="link content__link" href="pages/details.html">More</a>
                 </div>
             </div>
-        </div>
-        <div class="tiles content__tiles">
             <div class="tile content__tile">
                 <h2 class="header content__header">Content Header 3</h2>
                 <div class="content__container">
                     <p>Lorem ipsum dolor sit amet consectetur adipiscing elit. Quisque faucibus ex sapien vitae pellentesque sem placerat. In id cursus mi pretium tellus duis convallis. Tempus leo eu aenean sed diam urna tempor. Pulvinar vivamus fringilla lacus nec metus bibendum egestas. Iaculis massa nisl malesuada lacinia integer nunc posuere. Ut hendrerit semper vel class aptent taciti sociosqu. Ad litora torquent per conubia nostra inceptos himenaeos.</p>
-                    <a href="pages/details.html">More</a>
+                    <a class="link content__link" href="pages/details.html">More</a>
                 </div>
             </div>
-        </div>
-        <div class="tiles content__tiles">
-            <div class="tile content__tile">
+            <div class="tile content__tile content__tile--last">
                 <h2 class="header content__header">Content Header 4</h2>
                 <div class="content__container">
                     <p>Lorem ipsum dolor sit amet consectetur adipiscing elit. Quisque faucibus ex sapien vitae pellentesque sem placerat. In id cursus mi pretium tellus duis convallis. Tempus leo eu aenean sed diam urna tempor. Pulvinar vivamus fringilla lacus nec metus bibendum egestas. Iaculis massa nisl malesuada lacinia integer nunc posuere. Ut hendrerit semper vel class aptent taciti sociosqu. Ad litora torquent per conubia nostra inceptos himenaeos.</p>
-                    <a href="pages/details.html">More</a>
+                    <a class="link content__link" href="pages/details.html">More</a>
                 </div>
             </div>
         </div>
     </div>
-    <div class="search-bar">
-        <div class="tiles search-bar__tiles">
-            <div class="tile search-bar__tile">
-                <h2 class="header search-bar__header">Search Bar</h2>
-                    <form class="search-bar__form">
-                        <input class="search-bar__input" type="text" name="search">
-                        <button class="search-bar__button" type="submit" name="search-button">Search</button>
-                    </form>
-            </div>
+    <div class="card search-bar">
+        <div class="search-bar__tile">
+            <h2 class="header search-bar__header">Search Bar</h2>
+            <form class="search-bar__form">
+                <input class="input search-bar__input" type="text" name="search">
+                <button class="button search-bar__button" type="submit" name="search-button">Search</button>
+            </form>
         </div>
     </div>
     <div class="footer">
