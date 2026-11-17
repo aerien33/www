@@ -152,6 +152,12 @@ body {
     border-radius: var(--border-radius);
 }
 
+@media (prefers-color-scheme: dark) {
+    .input {
+        background: var(--color-background-light);
+    }
+}
+
 .input:focus {
     border: 3px solid var(--color-primary);
 }

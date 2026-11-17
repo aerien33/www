@@ -72,12 +72,6 @@
     font-size: 1rem;
 }
 
-@media(prefers-color-scheme: dark) {
-    .input {
-        background-color: var(--color-background-light);
-    }
-}
-
 .upload__input {
     width: 70%;
     margin: 1rem auto;
