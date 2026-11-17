@@ -10,7 +10,7 @@
 
 @media(min-width: 48rem) {
     .page {
-        grid-template-rows: 4rem auto auto auto;
+        grid-template-rows: 3.5rem auto auto auto;
     }
 }
 
