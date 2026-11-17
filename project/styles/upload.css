@@ -14,10 +14,22 @@
     text-align: center;
 }
 
+@media(prefers-color-scheme: dark) {
+    .content__tiles {
+        background-color: var(--color-background);
+    }
+}
+
 .form__tile {
     padding: 2rem;
-    background-color: var(--color-background);
+    background-color: var(--color-background-frames);
     border-radius: var(--border-radius);
+}
+
+@media(prefers-color-scheme: dark) {
+    .form__tile {
+        background-color: var(--color-white);
+    }
 }
 
 .upload__header {
@@ -39,6 +51,12 @@
 
 .upload__label {
     font-size: 1rem;
+}
+
+@media(prefers-color-scheme: dark) {
+    .input {
+        background-color: var(--color-background-light);
+    }
 }
 
 .upload__input {

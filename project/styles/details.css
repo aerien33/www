@@ -1,5 +1,9 @@
 @import "index.css";
 
+.content__tiles {
+    background-color: var(--color-background-frames);
+}
+
 .content__tile {
     border-radius: var(--border-radius);
 }
