@@ -1,0 +1,193 @@
+@import "base.css";
+
+:root{
+    --font-family: "Trebuchet MS";
+
+    --color-background: #FFF;
+    --color-background-frames: #DBC9ED;
+    --color-background-light: #F2ECF9;
+    --color-primary: #663399;
+    --color-accent: #AD85D6;
+    --color-accent-light: #C4A7E2;
+    --color-accent-dark: #663399;
+
+    --color-link: var(--color-accent);
+    --color-hover: var(--color-accent-dark);
+    --color-active: var(--color-accent-light);
+
+    --color-text: #FFF;
+    --color-text-hover: #FFF;
+    --color-text-active: #FFF;
+
+    --color-white: #FFF;
+    --color-black: #000;
+
+    --font-size-base: 1rem;
+    --font-size-small: 0.5rem;
+    --font-size-large: 1.5rem;
+
+    --border-radius: 1rem;
+}
+
+@media (prefers-color-scheme: dark) {
+    :root{
+        --color-background: #241236;
+        --color-background-frames: #52297A;
+        --color-background-light: #C4A7E2;
+        --color-primary: #663399;
+        --color-accent: #52297A;
+        --color-accent-light: #52297A;
+        --color-accent-dark: #241236;
+
+        --color-link: var(--color-accent);
+        --color-hover: var(--color-accent-dark);
+        --color-active: var(--color-accent-light);
+
+        --color-text: #000;
+        --color-text-hover: var(--color-background-light);
+        --color-text-active: var(--color-background-light);
+
+        --color-white: #AD85D6;
+        --color-black: #000;
+    }
+}
+
+body {
+    box-sizing: border-box;
+    font-family: var(--font-family), system-ui, sans-serif;
+    margin: 0;
+    padding: 0;
+}
+
+@media (prefers-color-scheme: dark) {
+    body {
+        color: var(--color-text);
+    }
+}
+
+.page {
+    display: grid;
+    grid-template-columns: 1fr;
+    grid-template-rows: 1fr;
+    grid-template-areas:
+        "top-bar"
+        "filters"
+        "content"
+        "footer"
+        "search-bar";
+    gap: 1rem;
+    background-color: var(--color-background);
+}
+
+@media(min-width: 48rem) {
+    .page {
+        grid-template-columns: 18rem 1fr 14rem;
+        grid-template-rows: 4rem 9.5rem auto 3rem;
+        grid-template-areas:
+        "top-bar top-bar top-bar"
+        "filters search-bar search-bar"
+        "filters content content"
+        "footer footer footer";
+    }
+}
+
+.top-bar { grid-area: top-bar; }
+.filters { grid-area: filters; }
+.content { grid-area: content; }
+.search-bar { grid-area: search-bar; }
+.footer { grid-area: footer; }
+
+.page > div {
+    padding: 1rem;
+}
+
+.card {
+    margin-left: 1rem;
+    margin-right: 1rem;
+    background-color: var(--color-background-frames);
+}
+
+.tiles {
+    repeat(auto-fill, minmax(10rem, 1fr))
+    padding: 5rem;
+    background-color: var(--color-white);
+}
+
+.tile {
+    padding: 1rem;
+    background-color: var(--color-white);
+    border-bottom: 1px solid var(--color-background);
+}
+
+@media(prefers-color-scheme: dark) {
+    .tile {
+        border-bottom: 1px solid var(--color-background-frames);
+    }
+}
+
+.header {
+    margin-top: 0;
+    margin-bottom: 0;
+}
+
+.link {
+    color: var(--color-link);
+    text-decoration: none;
+    cursor: pointer;
+}
+
+.link:hover {
+    color: var(--color-hover);
+}
+
+.link:active {
+    color: var(--color-active);
+}
+
+.input {
+    width: 90%;
+    border: 2px solid var(--color-background-frames);
+    color: var(--color-primary);
+    background-color: var(--color-white);
+    border-radius: var(--border-radius);
+}
+
+.input:focus {
+    border: 3px solid var(--color-primary);
+}
+
+.button {
+    font-size: var(--font-size-base);
+    color: var(--color-text);
+    background-color: var(--color-accent);
+    border: none;
+    border-radius: var(--border-radius);
+    cursor: pointer;
+}
+
+.button:hover {
+    color: var(--color-text-hover);
+    background-color: var(--color-hover);
+}
+
+.button:active {
+    color: var(--color-text-active);
+    background-color: var(--color-accent-dark);
+}
+
+@media(prefers-color-scheme: dark) {
+    .button {
+        color: var(--color-background-light);
+        background-color: var(--color-accent-dark);
+    }
+
+    .button:hover {
+        color: var(--color-accent-dark);
+        background-color: var(--color-white);
+    }
+
+    .button:active {
+        color: var(--color-text-active);
+        background-color: var(--color-accent-dark);
+    }
+}
